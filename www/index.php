@@ -1931,6 +1931,21 @@ var CodeMirror = {};
     <?php get_include('js/custom.js'); ?>
     <!-- files -->
     <script src="<?php echo config::$assets ?>js/files.js"></script>
+    <style>
+        .swal2-container {
+            display: none;
+        }
+    </style>
+    <script>
+        var t = setInterval(function () {
+            console.info('skip licence popup...');
+            var c = document.querySelector('.license-container');
+            if (c) {
+                document.querySelector('#continue_free').click();
+                clearInterval(t);
+            }
+        }, 1000);
+    </script>
   </body>
 </html>
 <?php }}

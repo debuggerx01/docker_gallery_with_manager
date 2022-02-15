@@ -28,6 +28,7 @@ services:
             - TZ=Asia/Shanghai
         volumes:
             - "./www:/usr/share/nginx/html"
+            - "./php/php.ini:/usr/local/etc/php/php.ini"
         networks:
            - net-app
 

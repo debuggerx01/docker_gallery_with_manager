@@ -1,9 +1,8 @@
-version: "3"
 services:
     nginx:
         image: nginx:latest
         container_name: "compose-nginx"
-        restart: always
+        restart: unless-stopped
         ports:
             - "8080:8080"
         environment:
@@ -18,9 +17,9 @@ services:
            - net-app
     php:
         build: .
-        image: php7.4_fpm_image
+        image: php8.3_fpm_image
         container_name: "compose-php"
-        restart: always
+        restart: unless-stopped
         ports:
             - "9000:9000"
         user: "${UID:-1000}"

@@ -2,7 +2,7 @@
 
 ## 运行
 ```shell
-docker-compose up
+docker compose up
 ```
 
 ## 访问
